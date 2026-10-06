@@ -4,65 +4,79 @@
 
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <style>
 
-html, body {
+    html, body {
 
-    margin: 0;
+      margin: 0;
 
-    width: 100%;
+      padding: 0;
 
-    height: 100%;
+      width: 100%;
 
-    background: black;
+      height: 100%;
 
-    overflow: hidden;
+      background: black;
 
-}
+      overflow: hidden;
 
-img {
+    }
 
-    width: 100%;
+    img {
 
-    height: 100%;
+      width: 100%;
 
-    object-fit: contain;
+      height: 100%;
 
-}
+      object-fit: contain;
 
-</style>
+    }
+
+  </style>
 
 </head>
 
 <body>
 
-<img id="slide" src="image1.jpg">
+  <img id="slideshow" src="26601ab3-b5d9-4bcc-861b-e1cb26cd79ff.jpeg">
 
-<script>
+  <script>
 
-const images = [
+    const pictures = [
 
-    "image1.jpg",
+      "26601ab3-b5d9-4bcc-861b-e1cb26cd79ff.jpeg",
 
-    "image2.jpg",
+      "3f065a62-583e-4dab-8d04-5c264a916a6d.jpeg",
 
-    "image3.jpg"
+      "62262c60-95ec-4d52-ba84-711602268e27.jpeg",
 
-];
+      "6a3cd825-c89e-4c88-9a48-e0b9f4f0ec7b.jpeg",
 
-let current = 0;
+      "85e70b0c-a25e-4697-9154-6d1755db278f.jpeg",
 
-setInterval(function() {
+      "8d83d2f1-a161-426f-a9fc-e34ad0fa4f47.jpeg",
 
-    current = (current + 1) % images.length;
+      "IMG_5238.jpeg",
 
-    document.getElementById("slide").src = images[current];
+      "af44498e-4420-4bbc-9c3f-1832260c4289.jpeg",
 
-}, 5000);
+      "ea3cc39d-8203-4fe3-bd58-c4856b98efe6.jpeg"
 
-</script>
+    ];
+
+    let current = 0;
+
+    setInterval(() => {
+
+      current = (current + 1) % pictures.length;
+
+      document.getElementById("slideshow").src = pictures[current];
+
+    }, 10000);
+
+  </script>
 
 </body>
 
